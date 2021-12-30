@@ -1,0 +1,47 @@
+[code]
+I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script-ch30.rpy", line 1510, in script call
+  File "game/script-ch30.rpy", line 1684, in script
+  File "game/script-ch30.rpy", line 1693, in <module>
+  File "game/definitions.rpy", line 1827, in checkEvents
+  File "game/definitions.rpy", line 1799, in _checkEvent
+  File "game/definitions.rpy", line 961, in checkConditional
+  File "game/Submods/Night Music/nightmusic.rpy", line 199, in getSongs
+    if checkSongConditional(station, mp3)
+  File "game/Submods/Night Music/nightmusic.rpy", line 164, in checkSongConditional
+    meta_dict = mutagen.mp3.EasyMP3(station.station + songname).get("genre", None)
+HeaderNotFoundError: can't sync to MPEG frame
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script-ch30.rpy", line 1510, in script call
+  File "game/script-ch30.rpy", line 1684, in script
+  File "C:\Program Files (x86)\Steam\steamapps\common\Doki Doki Literature Club\renpy\ast.py", line 814, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Program Files (x86)\Steam\steamapps\common\Doki Doki Literature Club\renpy\python.py", line 1719, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script-ch30.rpy", line 1693, in <module>
+  File "game/definitions.rpy", line 1827, in checkEvents
+  File "game/definitions.rpy", line 1799, in _checkEvent
+  File "game/definitions.rpy", line 961, in checkConditional
+  File "C:\Program Files (x86)\Steam\steamapps\common\Doki Doki Literature Club\renpy\python.py", line 1743, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+  File "game/Submods/Night Music/nightmusic.rpy", line 199, in getSongs
+    if checkSongConditional(station, mp3)
+  File "game/Submods/Night Music/nightmusic.rpy", line 164, in checkSongConditional
+    meta_dict = mutagen.mp3.EasyMP3(station.station + songname).get("genre", None)
+  File "python-packages/mutagen/_file.py", line 49, in __init__
+  File "python-packages/mutagen/_util.py", line 140, in wrapper
+  File "python-packages/mutagen/id3/_file.py", line 406, in load
+  File "python-packages/mutagen/_util.py", line 169, in wrapper
+  File "python-packages/mutagen/mp3/__init__.py", line 403, in __init__
+HeaderNotFoundError: can't sync to MPEG frame
+
+Windows-8-6.2.9200
+Ren'Py 6.99.12.4.2187
+Monika After Story 0.12.6-unstable.2021.12.22.153
+[/code]
